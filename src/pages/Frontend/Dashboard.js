@@ -1,4 +1,3 @@
-
 import React, { useContext } from 'react';
 import { FaUserTie } from 'react-icons/fa';
 import { ModeContext } from '../../contexts/ModeContext';
@@ -7,21 +6,20 @@ import { useAuthContext } from '../../contexts/AuthContext';
 import { OrderContext } from '../../contexts/OrderContext';
 
 function Dashboard() {
-    
     const context = useContext(ModeContext);
     const { data } = useAuthContext();
     const { allorder } = useContext(OrderContext);
     const { userDocuments } = useContext(OrderContext);
-    // const { setUserData } = useAuthContext();
     const { mode } = context;
 
-    const cardStyle = {
-        backgroundColor: mode === 'dark' ? 'rgb(46, 49, 55)' : 'rgba(229, 229, 229, 1)',
+    const tableStyle = {
+        backgroundColor: mode === 'dark' ? 'rgb(46, 49, 55)' : 'white',
         color: mode === 'dark' ? 'white' : 'black',
-        border: '2px solid #ccc',
-        boxShadow: mode === 'dark' ? 'inset 0 0 10px rgba(0, 0, 0, 0.6)' : 'none',
-        borderRadius: '0.75rem',
-        padding: '1rem',
+    };
+
+    const headerStyle = {
+        backgroundColor: mode === 'dark' ? 'rgb(75, 75, 75)' : 'rgba(229, 229, 229, 1)',
+        color: mode === 'dark' ? 'white' : 'black',
     };
 
     const textStyle = {
@@ -29,45 +27,41 @@ function Dashboard() {
     };
 
     return (
-        <section className="text-gray-600 body-font mt-10 mb-10 mt-5">
+        <section className="text-gray-600 body-font mt-10 mb-10">
             <div className="container px-5 mx-auto mb-10">
-                <div className="row text-center">
-                    <div className="col-md-4 col-sm-6 mb-4">
-                        <div style={cardStyle}>
-                            <div style={textStyle} className="mb-3">
-                                <FaUserTie size={50} />
-                            </div>
-                            <h2 className="font-weight-bold" style={textStyle}>{data.length}</h2>
-                            <p className="font-weight-bold" style={textStyle}>Total Products</p>
-                        </div>
-                    </div>
-                    <div className="col-md-4 col-sm-6 mb-4">
-                        <div style={cardStyle}>
-                            <div style={textStyle} className="mb-3">
-                                <FaUserTie size={50} />
-                            </div>
-                            <h2 className="font-weight-bold" style={textStyle}>{allorder.length}</h2>
-                            <p className="font-weight-bold" style={textStyle}>Total Orders</p>
-                        </div>
-                    </div>
-                    <div className="col-md-4 col-sm-6 mb-4">
-                        <div style={cardStyle}>
-                            <div style={textStyle} className="mb-3">
-                                <FaUserTie size={50} />
-                            </div>
-                            <h2 className="font-weight-bold" style={textStyle}>{userDocuments.length}</h2>
-                            <p className="font-weight-bold" style={textStyle}>Total Users</p>
-                        </div>
-                    </div>
-                    {/* <div className="col-md-3 col-sm-6 mb-4">
-                        <div style={cardStyle}>
-                            <div style={textStyle} className="mb-3">
-                                <FaUserTie size={50} />
-                            </div>
-                            <h2 className="font-weight-bold" style={textStyle}>18</h2>
-                            <p className="font-weight-bold" style={textStyle}>Total Products</p>
-                        </div>
-                    </div> */}
+                <div className="overflow-x-auto">
+                    <table className="min-w-full table-auto border-collapse w-100 mt-5" style={tableStyle}>
+                        <thead>
+                            <tr style={headerStyle}>
+                                <th className="px-4 py-2 text-left border-b">Icon</th>
+                                <th className="px-4 py-2 text-left border-b">Count</th>
+                                <th className="px-4 py-2 text-left border-b">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="px-4 py-2 border-b">
+                                    <FaUserTie size={30} />
+                                </td>
+                                <td className="px-4 py-2 border-b" style={textStyle}>{data.length}</td>
+                                <td className="px-4 py-2 border-b" style={textStyle}>Total Products</td>
+                            </tr>
+                            <tr>
+                                <td className="px-4 py-2 border-b">
+                                    <FaUserTie size={30} />
+                                </td>
+                                <td className="px-4 py-2 border-b" style={textStyle}>{allorder.length}</td>
+                                <td className="px-4 py-2 border-b" style={textStyle}>Total Orders</td>
+                            </tr>
+                            <tr>
+                                <td className="px-4 py-2 border-b">
+                                    <FaUserTie size={30} />
+                                </td>
+                                <td className="px-4 py-2 border-b" style={textStyle}>{userDocuments.length}</td>
+                                <td className="px-4 py-2 border-b" style={textStyle}>Total Users</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <DashboardTab />

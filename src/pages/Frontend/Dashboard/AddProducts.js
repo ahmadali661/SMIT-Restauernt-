@@ -69,9 +69,9 @@ export default function AddProducts() {
         <div className="container my-5">
             <div className="row">
                 <div className="col d-flex justify-content-center align-items-center">
-                    <div className="card p-3 text-center bg-dark text-white" style={{ width: 500 }}>
+                    <div className="card p-3 text-center bg-primary text-white" style={{ width: 500 }}>
                         <form onSubmit={handleAddProduct}>
-                            <h2 className='mb-4'>Add New Product here</h2>
+                            <h2 className='mb-4 text-dark'>Add New Product here</h2>
                             <div>
                                 <input type="text" placeholder='Product Title' className='form-control my-4' name='title' value={title}
                                     onChange={(e) => setTitle(e.target.value)} />
@@ -92,7 +92,7 @@ export default function AddProducts() {
                                 <textarea type="text" placeholder='Product Description' className='form-control my-4' name='description' style={{ height: 150 }} value={description}
                                     onChange={(e) => setDescription(e.target.value)} />
                             </div>
-                            <button className='btn btn-success w-100' disabled={isProcessing}>
+                            <button className='btn btn-info w-100' disabled={isProcessing}>
                                 {!isProcessing ? "Add Product" : <div className='spinner-grow spinner-grow-sm'></div>}
                             </button>
                         </form>

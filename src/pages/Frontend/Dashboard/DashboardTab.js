@@ -99,7 +99,7 @@ function DashboardTab() {
                             <Tab>
                                 <button
                                     type="button"
-                                    className="btn btn-outline-purple btn-outline-success btn-lg border rounded-lg text-xl mx-2">
+                                    className="btn btn-outline-purple btn-outline-primary btn-lg border rounded-lg text-xl  mx-2" style={{color:"brown"}}>
                                     <div className="d-flex align-items-center">
                                         <MdOutlineProductionQuantityLimits /> Products
                                     </div>
@@ -108,7 +108,7 @@ function DashboardTab() {
                             <Tab>
                                 <button
                                     type="button"
-                                    className="btn btn-outline-pink btn-outline-danger btn-lg border rounded-lg text-xl mx-2">
+                                    className="btn btn-outline-pink btn-outline-warning btn-lg border rounded-lg text-xl mx-2">
                                     <div className="d-flex align-items-center">
                                         <AiFillShopping /> Orders
                                     </div>
@@ -117,7 +117,7 @@ function DashboardTab() {
                             <Tab>
                                 <button
                                     type="button"
-                                    className="btn btn-outline-green rounded-lg text-xl mx-2 btn-outline-success btn-lg border">
+                                    className="btn btn-outline-green rounded-lg text-xl mx-2 btn-outline-primary btn-lg border" style={{color:"brown"}}>
                                     <div className="d-flex align-items-center">
                                         <FaUser /> Users
                                     </div>
@@ -127,11 +127,11 @@ function DashboardTab() {
 
                         <TabPanel>
                             <div className='mb-4'>
-                                <h1 className='text-center mb-5 text-3xl font-semibold underline'>Product Details</h1>
+                                <h1 className='text-center mb-5 text-3xl font-semibold underline'>Product Listing</h1>
                                 <div className="d-flex justify-content-end my-2">
                                     <Link to="/addproducts"
                                         type="button"
-                                        className="btn btn-danger">
+                                        className="btn btn-info text-light">
                                         <div className="d-flex align-items-center">
                                             Add Product <FaCartPlus size={20} />
                                         </div>
@@ -184,7 +184,7 @@ function DashboardTab() {
 
                         <TabPanel>
                             <div className="table-responsive mb-4">
-                                <h1 className='text-center mb-5 text-3xl font-semibold underline'>Order Details</h1>
+                                <h1 className='text-center mb-5 text-3xl font-semibold underline'>Order Listing</h1>
                                 <table className="table text-sm">
                                     <thead className="table-light">
                                         <tr>
@@ -224,7 +224,7 @@ function DashboardTab() {
 
                         <TabPanel>
                             <div className="table-responsive mb-4">
-                                <h1 className='text-center mb-5 text-3xl font-semibold underline'>User Details</h1>
+                                <h1 className='text-center mb-5 text-3xl font-semibold underline'>User Listing</h1>
                                 <table className="table text-sm">
                                     <thead className="table-light">
                                         <tr>
