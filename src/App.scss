@@ -1,0 +1,59 @@
+@import "./scss/bootstrap";
+@import "./scss/hero";
+@import "./scss/appLoader";
+@import "./scss/style";
+
+.register {
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 5px 5px 10px lavenderblush;
+}
+
+.register-card,
+.login-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.cart-items {
+  margin-bottom: 200px;
+}
+
+.nav-link {
+  color: white; /* Default text color */
+  font-size: 1rem; /* Font size */
+  position: relative; /* Needed for the pseudo-element */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.nav-link:hover {
+  color: #fff; /* Keep text color white on hover */
+}
+
+.nav-link::after {
+  content: ''; /* Creates a pseudo-element */
+  display: block; /* Makes it a block element */
+  width: 100%; /* Full width */
+  height: 2px; /* Height of the border */
+  background-color: brown; /* Color of the border */
+  position: absolute; /* Position it absolutely */
+  bottom: 0; /* Position it at the bottom of the link */
+  left: 0; /* Align to the left */
+  transform: scaleX(0); /* Initially scale to 0 for animation */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+}
+

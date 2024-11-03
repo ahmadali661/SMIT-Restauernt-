@@ -1,0 +1,28 @@
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.about1{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../Assets/5.png);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .reviews-section img {
+    width: 15%;
+    border-width: thin;
+}
+.contact1{
+    background-image: url(../Assets/b3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reviews-section img {
+    width: 15%;
+    border-width: thin;
+}

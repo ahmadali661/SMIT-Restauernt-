@@ -1,0 +1,30 @@
+.hero-section{
+    background-image:   linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../Assets/Hero.jpg);
+    
+    background-position: center;
+    background-size: cover;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    background-color: rgb(246, 246, 246);
+  }
+  .card1{
+    background-color: rgb(231, 229, 229);
+  }
+  .button3{
+    margin-left: 190px;
+  }
+  .primary-hover:hover{
+      color: green !important;
+  }
+  .custom-image {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.custom-image:hover {
+    transform: scale(1.1); /* Scale the image slightly on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
